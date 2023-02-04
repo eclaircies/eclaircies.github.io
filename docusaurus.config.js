@@ -10,6 +10,7 @@ const config = {
   tagline: 'La lumière au bout du pipeline',
   deploymentBranch:"main",
   favicon: 'img/graphics/ico1.png',
+  trailingSlash: true,
   // Set the production url of your site here
   url: 'https://eclaircies.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
