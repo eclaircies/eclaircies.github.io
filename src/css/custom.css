@@ -6,6 +6,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+header.hero{
+  padding:0;
+}
+
+.button-homepage{
+  background-color: white;
+}
+
+.supercenter{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #00004b;
@@ -216,8 +230,8 @@ html[data-theme='dark'] .light-green {
 }
 
 .member-img{
-  width:150px;
-  height:150px;
+  width:200px;
+  height:200px;
   border-radius: 50%;
 }
 

@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'éclaircies',
   tagline: 'La lumière au bout du pipeline',
-  deploymentBranch:"main",
+  deploymentBranch:"gh_pages",
   favicon: 'img/graphics/ico1.png',
   trailingSlash: true,
   // Set the production url of your site here
@@ -81,8 +81,8 @@ const config = {
           //   position: 'left',
           //   label: 'Tutorial',
           // },
-          {to: '/blog', label: 'Projets', position: 'left'},
-          {to: '/blog', label: 'Contact', position: 'left'},
+          {to: 'https://collectif-eclaircies.notion.site/8496aafc51444e53b4ff10808fb1e367?v=71276a673067454fa98b0b852dcbdc5f', label: 'Nos projets', position: 'left'},
+          {to: 'mailto:collectifeclaircies@gmail.com', label: 'Nous contacter', position: 'left'},
           // {
           //   href: 'https://github.com/facebook/docusaurus',
           //   label: 'GitHub',
@@ -94,18 +94,17 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'Eclaircies',
+            title: 'éclaircies',
             items: [
-              {label: 'Projets',to: '/docs/intro'},
+              {label: 'Nos projets',to: 'https://collectif-eclaircies.notion.site/8496aafc51444e53b4ff10808fb1e367?v=71276a673067454fa98b0b852dcbdc5f'},
               {label: 'Nous contacter',to: 'mailto:collectifeclaircies@gmail.com'},
             ],
           },
           {
             title: 'Réseaux sociaux',
             items: [
-              {label: 'Linkedin',to: '/docs/intro'},
-              {label: 'Twitter',to: '/docs/intro'},
-              {label: 'Github',to: '/docs/intro'},
+              {label: 'Linkedin',to: 'https://www.linkedin.com/company/%C3%A9claircies/about/'},
+              {label: 'Github',to: 'https://github.com/eclaircies'},
               // {
               //   label: 'Stack Overflow',
               //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
