@@ -4,10 +4,21 @@
  * work well for content-centric websites.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-header.hero{
-  padding:0;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
 }
 
 .button-homepage{
@@ -86,11 +97,6 @@ h3{
 
 .navbar__brand{
   font-size:16px;
-}
-
-.hero__title{
-  font-size:40px;
-  text-align: center;
 }
 
 .card {

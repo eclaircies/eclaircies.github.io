@@ -3,21 +3,16 @@
  * and scoped locally.
  */
 
-.heroBanner {
+.heroSection {
   padding: 4rem 0;
-  text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
+  .heroSection {
     padding: 2rem;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
