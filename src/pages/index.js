@@ -7,6 +7,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import styles from './index.module.scss';
+import Button from '../components/Button';
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -101,12 +102,9 @@ function HomepageHeader() {
             </p>
           </div>
           <div className='mt-6'>
-            <Link
-              className='button button--secondary button--lg button-homepage'
-              to='https://collectif-eclaircies.notion.site/8496aafc51444e53b4ff10808fb1e367?v=71276a673067454fa98b0b852dcbdc5f'
-            >
+            <Button to='https://collectif-eclaircies.notion.site/8496aafc51444e53b4ff10808fb1e367?v=71276a673067454fa98b0b852dcbdc5f'>
               Read our Manifesto
-            </Link>
+            </Button>
           </div>
         </div>
       </div>
