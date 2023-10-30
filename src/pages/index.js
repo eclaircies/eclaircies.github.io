@@ -8,6 +8,67 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 
 import styles from "./index.module.css";
 
+export default function Home() {
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <Layout
+      title={`éclaircies - La lumière au bout du pipeline`}
+      description="éclaircies est un collectif d’experts bénévoles, tous spécialistes des enjeux écologiques, énergétiques et climatiques. Convaincus qu’en démocratie, faire évoluer le système passe par un bon niveau d’information des citoyens et de leurs représentants politiques, nous avons pour objectif d’éclairer le débat public en mettant à disposition de la société civile (décideurs, individus consommateurs ou électeurs, territoires, etc.) de l’information qualifiée et des outils qui permettent d’y voir plus clair dans un océan d’informations parfois contradictoires."
+    >
+      <HomepageHeader />
+      <main>
+        {/* <HomepageFeatures /> */}
+        <section>
+          <div className="container main-section">
+            <h1>L'association éclaircies</h1>
+            <div className="row">
+              <div className="col col--6 supercenter">
+                <img
+                  src={`${useBaseUrl("img/graphics/degrade3.png")}`}
+                  alt="degrade"
+                  style={{ width: "70%", "margin-bottom": "20px" }}
+                />
+              </div>
+              <div
+                className="col col--6 supercenter"
+                style={{ "text-align": "left", "align-content": "center" }}
+              >
+                <p>
+                  <i>éclaircies</i> est un collectif{" "}
+                  <b>
+                    d’experts bénévoles, tous spécialistes des enjeux
+                    écologiques, énergétiques et climatiques
+                  </b>
+                  . Convaincus qu’en démocratie, faire évoluer le système passe
+                  par un bon niveau d’information des citoyens et de leurs
+                  représentants politiques, nous avons pour objectif d’éclairer
+                  le débat public en mettant à disposition de la société civile
+                  (décideurs, individus consommateurs ou électeurs, territoires,
+                  etc.) de l’information qualifiée et des outils qui permettent
+                  d’y voir plus clair dans un océan d’informations parfois
+                  contradictoires.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="light-green">
+          <div className="container main-section">
+            <h1>L'équipe éclaircies</h1>
+            <p>
+              🖐 Vous pouvez contacter l'équipe à{" "}
+              <Link to="mailto:collectifeclaircies@gmail.com">
+                collectifeclaircies@gmail.com
+              </Link>
+            </p>
+            <SectionTeam />
+          </div>
+        </section>
+      </main>
+    </Layout>
+  );
+}
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -143,64 +204,3 @@ const SectionTeam = () => {
     </div>
   );
 };
-
-export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <Layout
-      title={`éclaircies - La lumière au bout du pipeline`}
-      description="éclaircies est un collectif d’experts bénévoles, tous spécialistes des enjeux écologiques, énergétiques et climatiques. Convaincus qu’en démocratie, faire évoluer le système passe par un bon niveau d’information des citoyens et de leurs représentants politiques, nous avons pour objectif d’éclairer le débat public en mettant à disposition de la société civile (décideurs, individus consommateurs ou électeurs, territoires, etc.) de l’information qualifiée et des outils qui permettent d’y voir plus clair dans un océan d’informations parfois contradictoires."
-    >
-      <HomepageHeader />
-      <main>
-        {/* <HomepageFeatures /> */}
-        <section>
-          <div className="container main-section">
-            <h1>L'association éclaircies</h1>
-            <div className="row">
-              <div className="col col--6 supercenter">
-                <img
-                  src={`${useBaseUrl("img/graphics/degrade3.png")}`}
-                  alt="degrade"
-                  style={{ width: "70%", "margin-bottom": "20px" }}
-                />
-              </div>
-              <div
-                className="col col--6 supercenter"
-                style={{ "text-align": "left", "align-content": "center" }}
-              >
-                <p>
-                  <i>éclaircies</i> est un collectif{" "}
-                  <b>
-                    d’experts bénévoles, tous spécialistes des enjeux
-                    écologiques, énergétiques et climatiques
-                  </b>
-                  . Convaincus qu’en démocratie, faire évoluer le système passe
-                  par un bon niveau d’information des citoyens et de leurs
-                  représentants politiques, nous avons pour objectif d’éclairer
-                  le débat public en mettant à disposition de la société civile
-                  (décideurs, individus consommateurs ou électeurs, territoires,
-                  etc.) de l’information qualifiée et des outils qui permettent
-                  d’y voir plus clair dans un océan d’informations parfois
-                  contradictoires.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="light-green">
-          <div className="container main-section">
-            <h1>L'équipe éclaircies</h1>
-            <p>
-              🖐 Vous pouvez contacter l'équipe à{" "}
-              <Link to="mailto:collectifeclaircies@gmail.com">
-                collectifeclaircies@gmail.com
-              </Link>
-            </p>
-            <SectionTeam />
-          </div>
-        </section>
-      </main>
-    </Layout>
-  );
-}
