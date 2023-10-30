@@ -17,6 +17,7 @@ export default function Home() {
       description='éclaircies est un collectif d’experts bénévoles, tous spécialistes des enjeux écologiques, énergétiques et climatiques. Convaincus qu’en démocratie, faire évoluer le système passe par un bon niveau d’information des citoyens et de leurs représentants politiques, nous avons pour objectif d’éclairer le débat public en mettant à disposition de la société civile (décideurs, individus consommateurs ou électeurs, territoires, etc.) de l’information qualifiée et des outils qui permettent d’y voir plus clair dans un océan d’informations parfois contradictoires.'
     >
       <HomepageHeader />
+      <PressCoverageSection className='mt-24 mb-16' />
       <main>
         {/* <HomepageFeatures /> */}
         <section>
@@ -111,6 +112,87 @@ function HomepageHeader() {
     </header>
   );
 }
+
+function PressCoverageSection({ className }) {
+  return (
+    <section className={clsx('press-coverage-section', className)}>
+      <div className='max-w-[1100px] mx-auto'>
+        <h2 className="bold uppercase font-['Inter'] text-sm text-gray-400 text-center mb-6">
+          press coverage
+        </h2>
+        <div className='grid grid-cols-1 gap-12 lg:grid-cols-3'>
+          {pressArticles.map((article) => (
+            <div key={article.headline} className='flex flex-col items-start'>
+              <img
+                src={`${useBaseUrl(article.thumbnailSrc)}`}
+                className='h-[150px] object-contain w-full object-left'
+              />
+              <img
+                src={`${useBaseUrl(article.platformLogoSrc)}`}
+                className='h-[36px] object-contain w-full object-left mt-8 mb-16'
+              />
+              <div className='flex flex-col gap-2 text-blue-900'>
+                {article.tags.length > 0 && (
+                  <div className='flex gap-2'>
+                    {article.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                )}
+                <p>{article.publishedAt}</p>
+                <p className='font-semibold'>{article.headline}</p>
+                <Button
+                  className='w-fit'
+                  type='secondary'
+                  to={article.articleUrl}
+                >
+                  {article.ctaLabel}
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className='mt-16 flex justify-center'>
+          <Button className='w-fit'>More press coverage</Button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const pressArticles = [
+  {
+    thumbnailSrc: 'img/graphics/tbnl-le-monde.png',
+    platformLogoSrc: 'img/graphics/logo-le-monde.png',
+    tags: ['Climate', 'Fossil fuels'],
+    publishedAt: '06.10.2023',
+    headline: "How French banks are financing the world's largest oil producer",
+    articleUrl:
+      'https://www.lemonde.fr/planete/video/2023/10/06/enquete-comment-des-banques-francaises-financent-le-plus-gros-producteur-mondial-de-petrole_6192805_3244.html',
+    ctaLabel: 'Read the article',
+  },
+  {
+    thumbnailSrc: 'img/graphics/tbnl-france-info.png',
+    platformLogoSrc: 'img/graphics/logo-france-info.png',
+    tags: ['Climate', 'Olympic Games'],
+    publishedAt: '19.09.2023',
+    headline:
+      'Handisport, esport, climate, inclusivity: the Paris 2024 Olympic and Paralympic Games, a golden opportunity?',
+    articleUrl:
+      'https://www.francetvinfo.fr/sports/festival-demain-le-sport/direct-handisport-esport-climat-inclusivite-paris-2024-une-occasion-en-or_6070959.html',
+    ctaLabel: 'See the replay',
+  },
+  {
+    thumbnailSrc: 'img/graphics/tbnl-blast.png',
+    platformLogoSrc: 'img/graphics/logo-blast.png',
+    tags: ['Ecology', 'Fossil fuels'],
+    publishedAt: '05.07.2023',
+    headline: '2024: will the Olympics really be green?',
+    articleUrl:
+      'https://www.blast-info.fr/emissions/2023/2024-les-jo-seront-ils-vraiment-ecolos-luK4aJ03TxGu9Ifrl2NHFg',
+    ctaLabel: 'Watch the video',
+  },
+];
 
 const TeamMember = ({ src, name, contact, role }) => {
   return (
