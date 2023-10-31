@@ -86,7 +86,7 @@ const config = {
         title: "éclaircies",
         logo: {
           alt: "Eclaircies, la lumière au bout du pipeline",
-          src: "img/graphics/logo1.png",
+          src: "img/graphics/ico1.png",
         },
         items: [
           // {
@@ -97,13 +97,27 @@ const config = {
           // },
           {
             to: "https://collectif-eclaircies.notion.site/8496aafc51444e53b4ff10808fb1e367?v=71276a673067454fa98b0b852dcbdc5f",
-            label: "Nos projets",
+            label: "Projets",
+            className:"text-blue-900 mx-4 font-bold",
+            position: "left",
+          },
+          {
+            to: "/#press",
+            label: "Presse",
+            className:"text-blue-900 mx-4 font-bold",
+            position: "left",
+          },
+          {
+            to: "/#team",
+            label: "Equipe",
+            className:"text-blue-900 mx-4 font-bold",
             position: "left",
           },
           {
             to: "mailto:collectifeclaircies@gmail.com",
             label: "Nous contacter",
-            position: "left",
+            className: "border-solid border-[#1A8BF2] bg-[#1A8BF2] text-white hover:text-white px-6 rounded-lg font-bold hover:no-underline cursor-pointer text-base",
+            position: "right",
           },
           // {
           //   href: 'https://github.com/facebook/docusaurus',
@@ -133,7 +147,11 @@ const config = {
             items: [
               {
                 label: "Linkedin",
-                to: "https://www.linkedin.com/company/%C3%A9claircies/about/",
+                to: "https://www.linkedin.com/company/%C3%A9claircies/",
+              },
+              {
+                label: "Twitter",
+                to: "https://twitter.com/eclaircies_co",
               },
               { label: "Github", to: "https://github.com/eclaircies" },
               // {
