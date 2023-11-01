@@ -93,7 +93,7 @@ function HomepageHeader() {
       >
         <div className='container text-white flex flex-col justify-center'>
           <img
-            src={`${useBaseUrl('img/graphics/logo3.png')}`}
+            src={`${useBaseUrl('img/graphics/logo4.png')}`}
             style={{ width: 325 }}
             className='mb-4'
           />
@@ -272,7 +272,7 @@ function TeamSection(){
       <div className="flex flex-col lg:flex-row justify-between items-center lg:px-20">
         <div className="lg:w-1/2 p-8 lg:p-16">
           <h2 className="text-2xl text-blue-900 text-4xl font-bold mb-4" style={{ fontFamily: 'CabinetGrotesk' }}>Notre équipe</h2>
-          <p className="mb-4 text-blue-900">
+          <p className="mb-4 font-bold text-blue-900">
             Le collectif éclaircies a été créé pour contribuer à la réflexion et à l'action des citoyen.ne.s sur les questions écologiques.
           </p>
           <p className="mb-4 text-blue-900">
@@ -281,7 +281,7 @@ function TeamSection(){
           <p className="mb-4 text-blue-900">
             Notre objectif : combiner nos spécialités sur des projets d'intérêt général afin d'aider les citoyens à s'approprier les grands enjeux de la crise écologique et faciliter leur passage à l'action.
           </p>
-          <Button>Découvrir notre équipe</Button>
+          {/* <Button>Découvrir notre équipe</Button> */}
         </div>
 
         <div className="flex justify-between lg:w-1/2">
@@ -303,7 +303,7 @@ function CarbonBombsSection() {
       >
         {/* <img src={} alt="Carbon Bomb Image" className="object-fit h-120 w-full mb-6"/> */}
         <div className="text-white text-7xl font-bold mb-2">425</div>
-        <div className="text-white text-4xl mb-4">Carbon bombs worldwide</div>
+        <div className="text-white text-4xl font-bold mb-4">Carbon bombs worldwide</div>
         <Button to="https://carbonbombs.org">
           Découvrir carbonbombs.org
         </Button>
@@ -312,10 +312,10 @@ function CarbonBombsSection() {
       {/* Right Section */}
       <div className="flex flex-col items-start justify-center flex-1">
         <div className="text-blue-900 text-4xl font-bold mb-4" style={{ fontFamily: 'CabinetGrotesk' }}>Derniers projets</div>
-        <p className="text-blue-900 text-lg mb-4">
+        <p className="text-blue-900 font-bold mb-4">
           Découvrez <a className="underline" href="https://carbonbombs.org" target="_blank">carbonbombs.org</a>, la plateforme qui révèle les liens entre les plus grands projets d'extraction fossile du monde et les entreprises et banques impliquées.
         </p>
-        <p className="text-blue-900 text-lg mb-6">
+        <p className="text-blue-900 mb-6">
           Et découvrez l'ensemble de nos projets présents et passés sur la page Projets.
         </p>
         <Button to='https://collectif-eclaircies.notion.site/8496aafc51444e53b4ff10808fb1e367?v=71276a673067454fa98b0b852dcbdc5f'>

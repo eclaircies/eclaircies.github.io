@@ -182,7 +182,7 @@ const config = {
           //   ],
           // },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Eclaircies.`,
+        copyright: `Copyright © ${new Date().getFullYear()} éclaircies.`,
       },
       prism: {
         theme: lightCodeTheme,
